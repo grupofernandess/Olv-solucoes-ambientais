@@ -1174,7 +1174,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   // Navegação por clique: alterna a view imediatamente, sem depender
   // exclusivamente do evento hashchange do navegador.
   document.addEventListener('click', function(e){
-    const link = e.target.closest('[data-page]');
+    const link = e.target.closest('button[data-page]');
     if(!link) return;
     e.preventDefault();
     const key = link.dataset.page;
